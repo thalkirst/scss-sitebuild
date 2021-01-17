@@ -1,0 +1,300 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+body {
+    @include body-font;
+    margin: 0;
+}
+
+h1 {
+    @include heading-font;
+    font-size: 2rem;
+    line-height: 120%;
+    padding-bottom: 10px;
+}
+
+h2 {
+    display: inline;
+    @include heading-font;
+    font-size: 4rem;
+    line-height: 120%;
+    margin-bottom: -10px;
+}
+
+h3 {
+    @include heading-font;
+    font-size: 2rem;
+    line-height: 120%; 
+    margin-top: 15px;
+    margin-bottom: -10px;
+}
+
+
+hr {
+    max-width: 20%;
+}
+
+.nav-container {
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    
+    .navbar-link {
+        @include heading-font;
+        text-decoration: none;
+        font-size: 1.4rem;
+        color: $theme-primary;
+    }
+    .nav-button {
+        position: absolute;
+        margin-left: auto; 
+        right: 50px;
+        background-color: white;
+        border-radius: 5px;
+        font-size: 12px;
+        padding: 8px 10px;
+        color: $gray-darker;
+        border: 2px solid $gray-lighter;
+    }   
+    .nav-list {
+        list-style-type: none;
+    }
+    .nav-link {
+        @include heading-font;
+        text-decoration: none;
+        display: none;
+    }
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    padding: 70px;
+    text-align: center;
+    background: url("/dist/img/bg-pattern.png"), linear-gradient(to left, $theme-secondary, $theme-tertiary);
+    .main-content-text {
+        padding-bottom: 100px;
+        
+    }
+}
+
+.main-button {        
+    @include alt-font;
+    background: none;
+    border-radius: 30px;
+    color: white;
+    padding: 20px 50px;
+    border: 2px solid white;
+}
+
+.iphone {
+    position: relative;
+    padding-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 700px;
+
+}
+
+.picture-container {
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 20px;
+    margin-right: 20px;
+    top: 0;
+    left: 0;   
+}
+
+.image {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.download-content {
+    text-align: center;
+    padding: 150px 80px;
+    background: linear-gradient($theme-primary, darken($theme-primary, 5%));
+    .download-text {
+        font-size: 1.5rem;
+    }
+    .badges {
+        .badge-link {
+            display: block;
+            margin-bottom: 25px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            img {
+                height: 60px;
+            }
+        }
+    }
+}
+
+.features-header {
+    padding-bottom: 70px;
+}
+
+.features-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 70px;
+    text-align: center;
+}
+
+.features-icons {
+    padding-top: 100px;
+}
+
+.features-item {
+    padding: 60px 70px;
+}
+
+.text-primary {
+    font-size: 80px;      
+    background:-moz-linear-gradient(left, $theme-tertiary 0%, $theme-secondary 100%); 
+    background: -webkit-linear-gradient(left, $theme-tertiary 0%, $theme-secondary 100%); 
+    background: linear-gradient(to right, $theme-tertiary 0%, $theme-secondary 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+   -webkit-text-fill-color:transparent;
+    
+}
+
+.icon-text {
+    font-size: 1.2rem;
+    color: $gray-light;
+}
+
+section.cta {
+    position: relative;
+    display: flex;
+    padding: 250px 0;
+    background-image: url('../img/bg-cta.jpg');
+    background-position: center;
+    @include background-cover;
+    .cta-content {    
+        position: relative;
+        z-index: 1;
+        h2 {
+            display: block;
+            margin-left: 70px;
+            font-size: 50px;
+            max-width: 450px;
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: white;
+        }
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: fade-out(black, .5);
+    }
+}
+
+.contact {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 100px 70px;
+    background: $theme-primary;
+    background: -webkit-linear-gradient($theme-primary, darken($theme-primary, 5%));
+    background: linear-gradient($theme-primary, darken($theme-primary, 5%));
+    h2 {
+        margin-top: 0;
+        margin-bottom: 25px;
+        i {
+            color: $brand-google-plus;
+        }
+    }
+    .list-social {
+        list-style: none;
+        margin-bottom: 0;
+        padding-left: 0;
+        li {
+            display: inline-block;
+            a {
+                font-size: 40px;
+                line-height: 80px;
+                display: block;
+                width: 80px;
+                height: 80px;
+                color: white;
+                border-radius: 100%;
+            }
+            &.social-twitter {
+                a {
+                    background-color: $brand-twitter;
+                    &:hover {
+                        background-color: darken($brand-twitter, 5%);
+                    }
+                }
+            }
+            &.social-facebook {
+                a {
+                    background-color: $brand-facebook;
+                    &:hover {
+                        background-color: darken($brand-facebook, 5%);
+                    }
+                }
+            }
+            &.social-google-plus {
+                a {
+                    background-color: $brand-google-plus;
+                    &:hover {
+                        background-color: darken($brand-google-plus, 5%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    padding: 25px 0;
+    text-align: center;
+    color: fade-out(white, .7);
+    background-color: $gray-darker;
+    p {
+        font-size: 12px;
+        margin: 0;
+    }
+    ul {
+        margin-bottom: 0;
+        list-style: none;
+        padding-left: 0;
+        li {
+            display: inline-block;
+            a {
+                font-size: 12px;
+                color: fade-out(white, .7);
+                &:hover,
+                &:focus,
+                &:active,
+                &.active {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/* @import "navbar.scss";
+@import "masthead.scss";
+@import "download.scss";
+@import "features.scss";
+@import "cta.scss";
+@import "contact.scss";
+@import "footer.scss";
+@import "bootstrap-overrides.scss"; */
