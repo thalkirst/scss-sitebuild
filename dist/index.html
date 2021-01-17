@@ -16,7 +16,7 @@
 
 <body>
     <nav>
-        <div class="nav-container">
+        <div class="nav-container fixed">
             <a class="navbar-link" href="">Start Bootstrap</a>
             <button class="nav-button">
                 Menu
@@ -138,40 +138,69 @@
           </h2>
           <ul class="list-social">
             <li class="social-twitter">
-              <a href="https://twitter.com/">
+              <a href="https://twitter.com/" target="_blank">
                 <i class="fab fa-twitter"></i>
               </a>
+              <span class="tooltip">Twitter</span>
             </li>
             <li class="social-facebook">
-              <a href="https://www.facebook.com/">
+              <a href="https://www.facebook.com/" target="_blank">
                 <i class="fab fa-facebook-f"></i>
               </a>
+              <span class="tooltip">Facebook</span>
             </li>
             <li class="social-google-plus">
-              <a href="https://plus.google.com/">
+              <a href="https://plus.google.com/" target="_blank">
                 <i class="fab fa-google-plus-g"></i>
               </a>
+              <span class="tooltip">Google Plus</span>
             </li>
           </ul>
         </div>
       </section>
 
-      <footer>
+      <footer id="footer">
         <div class="footer">
           <p>&copy; Your Website 2020. All Rights Reserved.</p>
           <ul>
             <li>
-              <a class="privacyButton">Privacy</a>
+              <a href="#privacy">Privacy</a>
             </li>
             <li>
-              <a class="termsButton">Terms</a>
+              <a href="#terms">Terms</a>
             </li>
             <li>
-              <a class="faqButton">FAQ</a>
+              <a href="#faq">FAQ</a>
             </li>
           </ul>
         </div>
       </footer>
+
+      <div id="privacy">
+        <div class="popup-content">
+          <h1>Privacy Regulations</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque voluptatem dignissimos quis expedita earum explicabo nam perspiciatis. Aliquam, laudantium doloremque.</p>
+          <a href="#footer" class="close-popup">&times;</a>
+        </div>
+      </div>
+
+      <div id="terms">
+        <div class="popup-content">
+          <h1>Terms</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque voluptatem dignissimos quis expedita earum explicabo nam perspiciatis. Aliquam, laudantium doloremque.</p>
+          <a href="#footer" class="close-popup">&times;</a>
+        </div>
+      </div>
+
+      <div id="faq">
+        <div class="popup-content">
+          <h1>FAQ</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque voluptatem dignissimos quis expedita earum explicabo nam perspiciatis. Aliquam, laudantium doloremque.</p>
+          <a href="#footer" class="close-popup">&times;</a>
+        </div>
+      </div>
+
+      <script src="/dist/js/main.js"></script>
 
 </body>
 
